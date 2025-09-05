@@ -1,22 +1,66 @@
-# synthetic-data-gen-strategies
-<<<<<<< Updated upstream
-Built CTGAN for tabular data and Pix2Pix for image-to-comic translation in PyTorch as part of the Advanced ML Lab (Jan–Apr 2025).
+# Synthetic Data Generation Strategies
 
-Improved Iris dataset accuracy by 3.33% through data augmentation and deployed a Streamlit app for real-time synthesis.
+This project was developed as part of **DA312: Advanced Machine Learning Laboratory (Jan–Apr 2025)**.
+It focuses on building and evaluating GAN-based models for generating synthetic data in both **tabular** and **image domains**.
 
-=======
-This is a course project under DA312 Advanced ML Laboratory.
-Walkthrough:
-The file `app.py` is a frontend interface using streamlit which provides us options to input .csv or .jpg/.png type of files. It detects automatically whether we want to generate image or tabular data. 
-Case 1: If we are trying to generate tabular data we will get two choose between vanilla GAN and CTGAN and no. of epoch and how many samples we want to generate. The model will be trained on the fly. (Note: In this case no pre-trained model is used)
-Case 2: If we are trying to generate image then I am using a pre-trained model `generator_120.pth`(which was trained on Kaggle on dataset: https://www.kaggle.com/datasets/defileroff/comic-faces-paired-synthetic-v2 on GPU P100 for approx 10 hours). 120 is the number of epochs.
+---
 
-Running the app:
-First, you need to install dependencies using `pip install -r requirements.txt`.
-Then run the `app.py` using `python -m streamlit run app.py`.
+## Features
 
-Note: `testing_data` folder contains some testing data (image as well as csv). Also, it is highly recommended for image generation to use this data only as GANs could not generalise well in this limited training environment. They are prone to overfit on the domain.
+* **CTGAN for Tabular Data**
 
-TL;DR: Built CTGAN for tabular data and Pix2Pix for image-to-comic translation in PyTorch as part of the Advanced ML Lab (Jan–Apr 2025). Improved Iris dataset accuracy by 3.33% through data augmentation and deployed a Streamlit app for real-time synthesis.
->>>>>>> Stashed changes
-Report: https://drive.google.com/file/d/1Y6Hx2FJsqoxIJaOXLrbAghCdvE5GtLds/view
+  * Supports custom CSV files.
+  * Provides options to select between Vanilla GAN and CTGAN.
+  * Allows configuration of training parameters such as number of epochs and number of synthetic samples.
+  * Models are trained on the fly; no pre-trained weights are used.
+
+* **Pix2Pix for Image-to-Comic Translation**
+
+  * Uses a pre-trained model `generator_120.pth`.
+  * Model was trained on the [Comic Faces Paired Synthetic v2 dataset](https://www.kaggle.com/datasets/defileroff/comic-faces-paired-synthetic-v2) using a Tesla P100 GPU for approximately 10 hours (120 epochs).
+  * Accepts `.jpg` and `.png` image formats as input.
+
+* **Data Augmentation on the Iris Dataset**
+
+  * Applied augmentation techniques to improve classification accuracy.
+  * Achieved a **3.33% improvement in accuracy** compared to the baseline.
+
+* **Streamlit Application**
+
+  * Provides a single frontend interface (`app.py`) for both image and tabular data synthesis.
+  * Automatically detects the type of uploaded file (CSV or image) and runs the appropriate pipeline.
+  * For tabular data: trains a GAN model with user-specified parameters.
+  * For images: uses the pre-trained Pix2Pix generator for comic-style image translation.
+
+---
+
+## Project Structure
+
+* `app.py`: Streamlit frontend.
+* `testing_data/`: Example CSV and image files for quick testing.
+* `generator_120.pth`: Pre-trained Pix2Pix generator (image-to-comic model).
+
+---
+
+## Running the Application
+
+1. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. Launch the Streamlit app:
+
+   ```bash
+   streamlit run app.py
+   ```
+3. Upload a `.csv` file for tabular data generation or a `.jpg`/`.png` file for image translation.
+
+**Note:** For best results with image generation, use the provided sample data in `testing_data/`. GAN models trained in this setup may not generalize well and are prone to overfitting to their training domain.
+
+---
+
+## Report
+
+The detailed report can be found here:
+[Project Report (Google Drive)](https://drive.google.com/file/d/1Y6Hx2FJsqoxIJaOXLrbAghCdvE5GtLds/view)
