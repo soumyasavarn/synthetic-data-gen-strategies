@@ -3,6 +3,12 @@
 This project was developed as part of **DA312: Advanced Machine Learning Laboratory (Jan–Apr 2025)**.
 It focuses on building and evaluating GAN-based models for generating synthetic data in both **tabular** and **image domains**.
 
+The detailed report can be found here:
+[Project Report (Google Drive)](https://drive.google.com/file/d/1Y6Hx2FJsqoxIJaOXLrbAghCdvE5GtLds/view)
+
+Deployed version:
+[Streamlit hosted link](https://data-gen-strategies.streamlit.app/)
+
 ---
 
 ## Features
@@ -60,7 +66,3 @@ It focuses on building and evaluating GAN-based models for generating synthetic 
 
 ---
 
-## Report
-
-The detailed report can be found here:
-[Project Report (Google Drive)](https://drive.google.com/file/d/1Y6Hx2FJsqoxIJaOXLrbAghCdvE5GtLds/view)
