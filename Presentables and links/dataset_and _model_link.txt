@@ -1,0 +1,20 @@
+Datasets:
+---------
+Image dataset on which Pix2Pix is trained on: https://www.kaggle.com/datasets/defileroff/comic-faces-paired-synthetic-v2
+
+For tabular data I am not pretraining because it can be done on the fly. Still, I analysed ML performance boost on 
+`iris` dataset: https://www.kaggle.com/datasets/uciml/iris.
+
+Another dataset is provided in the testing_data folder (to be used in the app/frontend).
+Link: https://www.kaggle.com/datasets/hopesb/student-depression-dataset
+
+Pix2Pix training and testing:
+------------------------------
+Trained model `generator_120.pth` is also in the directory itself. 
+
+The training notebook: https://www.kaggle.com/code/soumyasavarn/imagegeneration-model-pix2pix-training?scriptVersionId=234881467
+
+Model can be downloaded by click on `Working` tab.
+Also Model link(Kaggle trained model): https://www.kaggle.com/models/soumyasavarn/generator_120_comic/
+
+The testing notebook: https://www.kaggle.com/code/soumyasavarn/model-testing-pix2pix?scriptVersionId=235064753
